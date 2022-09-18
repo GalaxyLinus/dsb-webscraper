@@ -3,6 +3,6 @@ a python script to download representation data from dsbmobile and filter/displa
 
 mostly made in german, can be modified
 
-to use, you need to log into dsbmobile in your browser and copy the link to the settings.json
+to use, you need to log into dsbmobile in your browser and copy the link to the settings.json (generates after first execution)
 
 WIP
