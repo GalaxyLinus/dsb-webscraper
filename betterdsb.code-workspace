@@ -2,9 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "..\\buildozer-action\\test_app"
 		}
 	]
 }

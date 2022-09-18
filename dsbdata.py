@@ -18,7 +18,7 @@ class dsbdata:
         
         for i in html_table_list:
             listelement = listelement + 1
-            if "Klasse" in i:
+            if "Vertretungs-Text" in i.text:
                 break
         html_table = html_table_list[listelement]
         
