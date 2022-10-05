@@ -15,13 +15,15 @@ except FileNotFoundError:
     print('ERROR: settings.json not found, enter parameters in settings.json')
     quit()
 
-date = dsbdata.dsbdata.getVertretungen(data=dsbdata.dsbdata.getData(url=url), klasse=klasse)[1]
+date = dsbdata.dsbdata.getVertretungen(data=dsbdata.dsbdata.getData(url=url, klasse=klasse), klasse=klasse)[1]
 
 days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
 
 weekday = days[datetime.datetime.strptime(date, '%d.%m.%Y').weekday()]
 
-output = "\n".join(dsbdata.dsbdata.getVertretungen(data=dsbdata.dsbdata.getData(url=url), klasse=klasse)[0])
+output = "\n".join(dsbdata.dsbdata.getVertretungen(data=dsbdata.dsbdata.getData(url=url, klasse=klasse), klasse=klasse)[0])
 
 print(f'Vertretungen für {weekday}, den {date}:\n')
 print(output,end='\n\n')
+
+input()

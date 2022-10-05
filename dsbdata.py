@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 class dsbdata:
-    def getData(url):
+    def getData(url, klasse):
         data = []
         
         html = requests.get(url).text
@@ -18,8 +18,9 @@ class dsbdata:
         
         for i in html_table_list:
             listelement = listelement + 1
-            if "Vertretungs-Text" in i.text:
+            if "Vertretungs-Text" in i.text and f"{klasse}" in i.text:
                 break
+        
         html_table = html_table_list[listelement]
         
         # Find Date
